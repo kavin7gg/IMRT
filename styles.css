@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+:root{
+  --bg:#05030b;
+  --panel:#0b0b12;
+  --neon-blue:#00e6ff;
+  --neon-pink:#ff4dd2;
+  --neon-cyan:#40ffd8;
+  --muted:#9aa0a6;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background: radial-gradient(ellipse at top, #0a0a14 0%, #05030b 60%);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #e6eef7;
+  -webkit-font-smoothing:antialiased;
+}
+
+.app {
+  display:flex;
+  height:100vh;
+  padding:20px;
+  gap:20px;
+  align-items:stretch;
+}
+
+/* left panel - controls */
+.panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  padding:16px;
+  width:300px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6), 0 0 18px rgba(0,0,0,0.6) inset;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* center content */
+.center {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+/* top header neon */
+.header {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo {
+  background: linear-gradient(90deg,var(--neon-blue),var(--neon-pink));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  font-family: 'Orbitron', sans-serif;
+  font-weight:700;
+  font-size:18px;
+}
+
+/* neon chart card */
+.card {
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(10,10,15,0.6), rgba(6,6,10,0.4));
+  padding:12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(0,230,255,0.06);
+}
+
+/* buttons */
+.btn {
+  background: linear-gradient(90deg, rgba(0,230,255,0.06), rgba(255,77,210,0.04));
+  border: 1px solid rgba(255,255,255,0.06);
+  color:var(--neon-cyan);
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn:active { transform: translateY(1px); }
+
+/* sliders and labels */
+.control-row{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.label{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;}
+.value{font-weight:700;color:var(--neon-pink)}
+.log {
+  background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(10,10,14,0.2));
+  border-radius:8px;
+  padding:10px;
+  height:220px;
+  overflow:auto;
+  font-family: monospace;
+  font-size:12px;
+  color:#cfeff6;
+  border:1px solid rgba(255,255,255,0.02);
+}
+.footer {
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  align-items:center;
+}
+.small-muted { font-size:11px; color:var(--muted); }
